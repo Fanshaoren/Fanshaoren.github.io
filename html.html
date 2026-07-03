@@ -6,7 +6,6 @@
     <title>html学习</title>
     <style>
         section {
-            height: 3000px;
             border: 1px solid #ccc;
             margin: 20px;
             padding: 20px;
@@ -36,6 +35,14 @@
             border: 1px solid rgb(0, 0, 0);
             padding: 6px 10px;
         }
+        .img-tip {
+            display: block;
+            margin: 10px 0 4px 0;
+            font-size: 17px;
+            color: #222;
+            font-weight: 500;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -47,8 +54,10 @@
         <a href="#section3"><h3 style="display: inline-block;">下载VScode及使用 | </h3></a>
         <a href="#section4"><h3 style="display: inline-block;">文本标签</h3></a>
     </div>
+
+    <!--第一章-->
     <hr>
-    <section id="section1">
+    <section id="section1" style="height: 3100px">
     <a href="#">返回顶部</a>
     <h1>什么是前端</h1>
     <h3>    想要学好web前端开发，就得先了解它的技术架构</h3>
@@ -68,7 +77,7 @@
             <h2>使用web应用的方式</h2>
             <pre>
 使用web应用是十分便捷的，我们只需要一个<div style="display: inline-block; color: red;">浏览器和rul地址</div>，就可以
-获取我们想要的web资源，例如右图：
+获取我们想要的web资源，例如右图：（见1.1）
 等待网络加载完成，就能进入应用
 
 web的特点就是，通过网址访问，无需从应用商城下载安装包。
@@ -94,7 +103,7 @@ web应用通过浏览器运行可以兼容不同操作系统，可以同时兼�
             <h1>前端</h1>
             <pre>
 我们先来聊聊前端，前端就是用户看得见和可以操作的部分，
-这个就是一个前端页面见右图。
+这个就是一个前端页面（见1.2）。
 在这个页面中我们可以看到视频、文字；我们可以点击看不同的视频、
 上下滑动切换不同的视频、还可以通过不同的分类标签来获取你感兴趣
 的内容、你也可以通过评论区和其他用户互动。
@@ -172,39 +181,269 @@ Web前端负责让用户直接看到、操作并与之交互的部分，
             </pre>
 
         </div>
-        <div>
+        <div style="max-width: 1000px; text-align: center;">
+            <div class="img-tip">1.1</div>
             <img src="picture/web1.jpg" alt="web示意图" style="width: 1200px; max-width: 100%;">
-            <br><br><br><br><br><br><br><br>
+            <br><br>
+
+            <div class="img-tip">1.2</div>
             <img src="picture/web2.jpg" alt="web示意图" style="width: 1200px; max-width: 100%;">
         </div>
     </div>
 
-
-</section>
+    <!--第二章-->
+    </section>
     <hr>
-    <section id="section2">
+    <section id="section2" style="height: 6000px">
         <a href="#">返回顶部</a>
         <h1>编写第一个html文件</h1>
         <h3>要想前端开发，得先学会html</h3>
         <br>
 
-    <div style="display: flex; align-items: flex-start; gap: 40px;">
-        <div style="flex: 1;">
+        <div style="display: flex; align-items: flex-start; gap: 40px;">
+            <div style="flex: 1;">
             
-            
-            
+                <h1>创建html文件</h1>
+                <pre>
+在电脑桌面，点右键，选择新建一个文本文件（见2.1），
+然后右击文件，点击重命名，将后缀txt改成html
+（没有.txt需在此电脑->查看->显示->文件扩展名
+勾选），就可得到一个网页文件文件，更改成功的话
+文件的图标会变成浏览器的样式（见2.2）
+
+
+接着我们右击文件，点击在记事本中编辑（见2.3），
+我们可以在记事本中随意写入一段文字。
+例：
+
+白日依山尽，黄河入海流
+
+ctrl+s保存后，我们双击左键就可以打开这个网页文件了
+效果：↓（见2.3）
+                </pre>
+                <img src="picture/html4.jpg" alt="html示意图" style="width: 500x; max-width: 100%;">
+                <pre>
+我们可以看出网页出现的内容就是刚刚我们编辑的文字。
+
+
+
+现在我们可以尝试一边编辑文字一边查看它在浏览器中的效果（见2.5）
+现在的页面左边为文本编辑器，右边则是网页在浏览器中的效果。
+
+
+
+接下来，我们把诗句补充完整
+例：
+
+白日依山尽，黄河入海流
+欲穷千里目，更上一层楼
+
+保存并刷新浏览器（见2.6）
+
+
+但我们很快发现，在左边的文本编辑器中诗句是有回车的
+浏览器这边文字却都显示在同一行。
+其实是因为浏览器不能识别我们的换行符，
+这时我们在第一句的末尾加上一对尖括号里面写br
+例：
+
+白日依山尽，黄河入海流&lt;br&gt;
+欲穷千里目，更上一层楼
+
+
+这样浏览器就可以将下面的诗句进行换行了（见2.7）
+（相关内容在第4章详细讲解）
+
+
+这是一段在线图片的地址：
+https://kkimgs.yisou.com/ims?kt=url&at=ori
+&key=aHR0cDovL3FxcHVibGljLnFwaWMuY24vcXFfc
+HVibGljLzAvMC0zNDY4NDQ3MzMyLTAxNTYyMjgxQ0Q
+xMDhDQjY1MUI2RUJFOEY4NDM2RUM2LzA_Zm10PWpwZ
+yZoPTU1MyZwcHY9MS5qcGcmc2l6ZT0xNjgmdz03NDE
+=&sign=yx:re5YfxWmfH_nYubgaTa3ZR5XS3M=&tv=0_0
+当我们把它粘贴到浏览器中，会得到这样一张图片（见2.8）
+
+
+此时我们在编辑其中添加一对尖括号里面写img，
+然后再img的后面添加一个src等于一对双引号，
+最后将图片的链接放入双引号中。
+例：
+
+白日依山尽，黄河入海流&lt;br&gt;
+欲穷千里目，更上一层楼
+https://kkimgs.yisou.com/ims?kt=url&at=ori
+&key=aHR0cDovL3FxcHVibGljLnFwaWMuY24vcXFfc
+HVibGljLzAvMC0zNDY4NDQ3MzMyLTAxNTYyMjgxQ0Q
+xMDhDQjY1MUI2RUJFOEY4NDM2RUM2LzA_Zm10PWpwZ
+yZoPTU1MyZwcHY9MS5qcGcmc2l6ZT0xNjgmdz03NDE
+=&sign=yx:re5YfxWmfH_nYubgaTa3ZR5XS3M=&tv=0_0
+&lt;img src="https://kkimgs.yisou.com/ims?kt=url&at=ori
+&key=aHR0cDovL3FxcHVibGljLnFwaWMuY24vcXFfc
+HVibGljLzAvMC0zNDY4NDQ3MzMyLTAxNTYyMjgxQ0Q
+xMDhDQjY1MUI2RUJFOEY4NDM2RUM2LzA_Zm10PWpwZ
+yZoPTU1MyZwcHY9MS5qcGcmc2l6ZT0xNjgmdz03NDE
+=&sign=yx:re5YfxWmfH_nYubgaTa3ZR5XS3M=&tv=0_0"&gt;
+
+提示：在此为了方便演示，把网址折叠展示，使用时
+切记要展开，否则会显示失败
+
+可以看到图片已经显示到网页中了（见2.9）
+同时我们也可以看到没有添加img的链接
+它是以文字的形式显示在网页中的
+
+接下来我们来做个实验，我们将诗的标题和作者添加进去。
+输入一对尖括号和h1的组合，注意后面的h1需要加上斜杠，
+把诗题包住；
+作者这一行也是一样的，只是把h1换成h2。
+例：
+
+&lt;h1&gt;《登鹤雀楼》&lt;/h1&gt;
+&lt;h2&gt;王之涣&lt;/h2&gt;
+白日依山尽，黄河入海流&lt;br&gt;
+欲穷千里目，更上一层楼&lt;br&gt;
+&lt;img src="https://kkimgs.yisou.com/ims?kt=url&at=ori
+&key=aHR0cDovL3FxcHVibGljLnFwaWMuY24vcXFfc
+HVibGljLzAvMC0zNDY4NDQ3MzMyLTAxNTYyMjgxQ0Q
+xMDhDQjY1MUI2RUJFOEY4NDM2RUM2LzA_Zm10PWpwZ
+yZoPTU1MyZwcHY9MS5qcGcmc2l6ZT0xNjgmdz03NDE
+=&sign=yx:re5YfxWmfH_nYubgaTa3ZR5XS3M=&tv=0_0"&gt;
+
+最终效果（见2.10）
+
+我们能发现，用h1和h2包裹的文字字体颜色更深字体更大
+而且不难发现h1的字体和颜色是最大最深的
+
+我们发现只要文字加上尖括号和特定的字符，
+在网页中的显示效果就会不一样。
+其实这种尖括号和字母组合起来的形式他有一个名字
+它们就叫做标签，字母就是它的标签名：
+
+&lt;h1&gt;&lt;/h1&gt;
+比如这个就叫做h1标签；
+
+&lt;h2&gt;&lt;/h2&gt;
+比如这个就叫做h2标签
+
+&lt;img /&gt;
+而这个可以显示图片的标签叫做img标签
+
+从刚刚的演示中不难看出标签的作用
+就是把文字标记起来，让文字内容变成其他格式或功能的作用
+才让代码变成优美的网页。
+因为它有可以标记内容的特性，所以我们叫这段文字叫标记语言
+这种标记形式是html规定的，因此我们称做这段文字或者说代码
+叫做html标记语言。
+                </pre>
+                <h1>HTML</h1>
+                <h2>HTML简介</h2>
+                <pre>
+HTML（<div style="display: inline-block; color: red;">HyperText Markup Language</div>，超文本标记语言）
+是用于创建和设计网页的标准标记语言。它通过标签（Tags）
+定义网页的结构和内容，是构建互联网的基础技术之一。
+                </pre>
+
+                <h2>HTML的核心特点</h2>
+                <pre>
+1、<div style="display: inline-block; color: red;">标记语言</div>：通过标签（如&lt;p&gt;、&lt;img&gt;）描述内容，而非编程逻辑。
+2、<div style="display: inline-block; color: red;">平台无关性</div>：所有浏览器（Chrome、Firefox等）均支持HTML。
+3、<div style="display: inline-block; color: red;">静态结构</div>：定义网页的文本、图片、链接等，动态功能组结合CSS和JavaScript。
+4、<div style="display: inline-block; color: red;">超文本</div>：支持通过超链接（&lt;a&gt;）跳转到其他。
+                </pre>
+
+                <h2>HTML的基本结构</h2>
+                <pre>
+<div style="display: inline-block; color: red;">                  
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset-"UTF-8"&gt;
+        &lt;title&gt;网页标题&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;这是一个标题&lt;/h1&gt;
+        &lt;p&gt;这是一个段落。&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</div>
+下面我们来了解html的基本结构：
+
+<div style="display: inline-block; color: red;">&lt;!DOCTYPE html&gt;</div>：这看起来是一个html标签，但它并不是
+HTML标签用尖括号包裹（如&lt;p&gt;、&lt;div&gt;）
+而&lt;!DOCTYPE html&gt;以左尖括号和感叹号开头，属于特殊指令。
+&lt;!DOCTYPE&gt;的作用是决定浏览器以何种方式分析网页
+而这里&lt;!DOCTYPE html&gt;的作用是让浏览器以html解析网页
+
+<div style="display: inline-block; color: red;">&lt;html&gt;&lt;/html&gt;</div>：html是一个双标签，它有开始标签和结束标签
+结束标签中需要在标签名前面添加斜杠这样就是一个html标签了,
+html标签是HTML文档的根元素,所有其他HTML元素都必须嵌套在它内部,
+
+<div style="display: inline-block; color: red;">&lt;head&gt;&lt;/head&gt;/&lt;body&gt;&lt;/body&gt;</div>：HTML元素里面
+最重要的两个元素就是head标签和body标签，注意他们都是双标签，要用斜杆
+来表示结束标签
+
+<div style="display: inline-block; color: red;">&lt;meta&gt;</div>：meta标签的主要作用是描述网页的元信息和控制浏览器的行为
+这里的charset="UTF-8"表示声明文档使用UTF-8编码，定义字符编码是
+文档中必须的，不然网页可能会出现乱码
+
+<div style="display: inline-block; color: red;">&lt;title&gt;&lt;/title&gt;</div>：它的作用是定义网页的标题，同样的
+它是一个双标签，需要注意书写结尾标签
+
+<div style="display: inline-block; color: red;">&lt;h1&gt;&lt;/h1&gt;</div>：h1标签用来描述网页内容中最大的标题
+
+<div style="display: inline-block; color: red;">&lt;p&gt;&lt;/p&gt;</div>：p标签一般用来描述内容的段落部分
+
+到现在一个基本的html结构就书写完成了
+                </pre>
+
+            </div>
+            <div style="max-width: 1000px; text-align: center;">
+                <div class="img-tip">2.1</div>
+                <img src="picture/html1.jpg" alt="html示意图" style="width: 400px; max-width: 100%;">
+                <br><br>
+
+                <div class="img-tip">2.2</div>
+                <img src="picture/html2.jpg" alt="html示意图" style="width: 500x; max-width: 100%;">
+                <br><br>
+
+                <div class="img-tip">2.4</div>
+                <img src="picture/html3.jpg" alt="html示意图" style="width: 500x; max-width: 100%;">
+                <br><br>
+
+                <div class="img-tip">2.5</div>
+                <img src="picture/html5.jpg" alt="html示意图" style="width: 1000px; max-width: 100%;">
+                <br><br>
+
+                <div class="img-tip">2.6</div>
+                <img src="picture/html6.jpg" alt="html示意图" style="width: 1000px; max-width: 100%;">
+                <br><br>
+
+                <div class="img-tip">2.7</div>
+                <img src="picture/html7.jpg" alt="html示意图" style="width: 1000px; max-width: 100%;">
+                <br><br>
+
+                <div class="img-tip">2.8</div>
+                <img src="picture/html8.jpg" alt="html示意图" style="width: 1000px; max-width: 100%;">
+                <br><br>
+                
+                <div class="img-tip">2.9</div>
+                <img src="picture/html9.jpg" alt="html示意图" style="width: 1000px; max-width: 100%;">
+
+                <div class="img-tip">2.10</div>
+                <img src="picture/html10.jpg" alt="html示意图" style="width: 1000px; max-width: 100%;">
+            </div>
         </div>
-        <div>
-            <!--图片-->
-        </div>
-    </div>
     </section>
     <hr>
+
+    <!--第三章-->
     <section id="section3">
         <a href="#">返回顶部</a>
         <h1>下载VScode及使用</h1>
     </section>
     <hr>
+
+    <!--第四章-->
     <section id="section4">
         <a href="#">返回顶部</a>
         <h1>文本标签</h1>
